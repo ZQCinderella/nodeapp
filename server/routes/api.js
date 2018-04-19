@@ -16,7 +16,7 @@ const moduleUrls = {
 }
 
 function listenApi(app) {
-  app.use('/api', (req, res, next) => {
+  app.use('/query', (req, res, next) => {
     //1、检查token是都还生效
     //2、根据moduleName,和node_env 取出对应的接口地址
     //3、向服务器发送请求
