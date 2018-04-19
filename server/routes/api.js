@@ -26,7 +26,6 @@ function listenApi(app) {
     }).catch(data => {
       res.json(data);
     })
-    res.send({age: 10});
   }, (req, res, next) => {
     const host = req.headers.origin;
     /* req.body的格式为
@@ -43,7 +42,8 @@ function listenApi(app) {
     const { filter, module, path } = body;
 
     //解析出对应的url
-    getUrlByModuleName(module, path);
+    const fullUrl = getUrlByModuleName(module, path);
+    res.send({done: true});
   })
 }
 

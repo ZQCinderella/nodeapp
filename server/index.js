@@ -18,6 +18,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
+
+//中间件必须next()才能继续往下走
+
 require('./boot')(app);
 
 //routers里面监听的是页面url的变化，并不是监听的接口变化

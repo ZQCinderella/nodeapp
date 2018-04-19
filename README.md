@@ -38,23 +38,21 @@
 
     > api.js 根据客户端发来的module, 在config/index.js中匹配到运行环境的地址，再拼接真实的api地址
 
-    const {
+    > const {
       FINANCE,
       ORDER_SYS,
       CUSTOM_SERVICE
     } = process.env;
 
-    console.log(FINANCE);
-
-    const moduleUrls = {
+    > const moduleUrls = {
       finance: FINANCE,
       orderSys: ORDER_SYS,
       customService: CUSTOM_SERVICE
     }
-    const url = `${moduleUrls[moduleName].replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
 
-    > 利用request模块发送请求
-      request(options, (err, res, data) => {})
+    > const url = `${moduleUrls[moduleName].replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+
+    > 利用request模块发送请求  request(options, (err, res, data) => {})
 
 ## 项目配置及启动
   * 1 nodemon是用来实现代码修改后服务重新启动

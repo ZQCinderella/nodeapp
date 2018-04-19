@@ -7,8 +7,9 @@
  const config = require('./config');
  const { NODE_ENV } = process.env;
 
-function checkLoginStatus () {
-  console.log(666);
+function checkLoginStatus (req, res, next) {
+  //console.log(666);
+  next();
 }
 
  module.exports = function (app) {

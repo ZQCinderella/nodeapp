@@ -21,12 +21,13 @@
     "hbs": "~4.0.1",
     "http-errors": "~1.6.2",
     "ip": "^1.1.5",
+    "jimp": "^0.2.28",
     "moment": "^2.18.1",
+    "mongoose": "^5.0.15",
     "morgan": "~1.9.0",
     "request": "^2.81.0",
     "winston": "^2.3.1",
-    "winston-daily-rotate-file": "^1.4.6",
-    "jimp": "^0.2.28"
+    "winston-daily-rotate-file": "^1.4.6"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
